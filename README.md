@@ -27,7 +27,8 @@ TSTExactPDF.nb and WELCHExactPDF.nb - the exact distribution for the Student two
 
 Supplementary-Materials.pdf - Remarks on Theorem 1.1 and its application to real data; extended version of the literature review; comparison of the result of Theorem 1.1 with the exact distribution of the Welch statistic; proof of Theorem 5.1.
  
-----<sup>1</sup>For the F−statistic we use Monte Carlo integration.\
+---
+<sup>1</sup>For the F−statistic we use Monte Carlo integration.\
 <sup>2</sup>For the F−statistic and n<sub>1</sub> > 3 we use Monte Carlo integration.
 
 ## Reference
