@@ -27,15 +27,13 @@ TSTExactPDF.nb and WELCHExactPDF.nb - the exact distribution for the Student two
 
 Supplementary-Materials.pdf - Remarks on Theorem 1.1 and its application to real data; extended version of the literature review; comparison of the result of Theorem 1.1 with the exact distribution of the Welch statistic; proof of Theorem 5.1.
  
-    ________________________________________________________________________________
-<sup>1</sup>For the F−statistic we use Monte Carlo integration.\
+----<sup>1</sup>For the F−statistic we use Monte Carlo integration.\
 <sup>2</sup>For the F−statistic and n<sub>1</sub> > 3 we use Monte Carlo integration.
 
 ## Reference
-Zholud, D. (2014). [**Tail approximations for the Student t−, F−, and Welch statistics for non-normal and not necessarily i.i.d. random variables**](http://www.zholud.com/articles/Tail-approximations-for-the-Student-t-,-F-,-and-Welch-statistics-for-non-normal-and-not-necessarily-i.i.d.-random-variables.pdf), **Bernoulli**, Vol. 20, No. 4, pp. 2102-2130\
+Zholud, D. (2014). [**Tail approximations for the Student t−, F−, and Welch statistics for non-normal and not necessarily i.i.d. random variables**](http://www.zholud.com/articles/Tail-approximations-for-the-Student-t-,-F-,-and-Welch-statistics-for-non-normal-and-not-necessarily-i.i.d.-random-variables.pdf), *Bernoulli*, Vol. 20, No. 4, pp. 2102-2130\
 
-W.D. Ray and A.E.N.T. Pitman (1961). An exact distribution of the Fisher-Behrens-Welch statistic for testing the
-diﬀerence between the means of two normal populations with unknown variance, *Journal of the Royal Statistical Society. Series B (Methodological)*, Vol. 23, No. 2, pp. 377–384
+W.D. Ray and A.E.N.T. Pitman (1961). **An exact distribution of the Fisher-Behrens-Welch statistic for testing the diﬀerence between the means of two normal populations with unknown variance**, *J. Royal Stat. Soc., Series B*, Vol. 23, No. 2, pp. 377–384
 
 ## BiBTeX
 
