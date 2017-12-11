@@ -7,7 +7,7 @@ We present a detailed study of the asymptotic behavior of the distribution of th
 
 MATLAB
 
-[OST /TST /WELCH /F ]+ComputeKg.m - compute Kg for the Student one- and two- sample t−, Welch, and F− statistics using adaptive Simpson or Lobatto quadratures. Here g is an arbitrary multivariate density.<sup>1</sup>
+[OST /TST /WELCH /F ]+ComputeKg.m - compute K<sub>g</sub> for the Student one- and two- sample t−, Welch, and F− statistics using adaptive Simpson or Lobatto quadratures. Here g is an arbitrary multivariate density.<sup>1</sup>
 
 [TST /WELCH /F ]+ComputeKgIS+.m - the same as above but for the case where samples are independent.<sup>2</sup>
 
@@ -17,7 +17,7 @@ RunSimulation+[IID/MVN ]+.m - perform simulation study for i.i.d. and dependent/
 
 Wolfram Mathematica
 
-[OST /TST /WELCH /F ]+ComputeKg.nb - compute the exact expression for K<sub>g</sub> for an arbitrary multivariate density g and given sample size(s). We include a number of examples, such as evaluation of K<sub>g</sub> for the zero-mean Gaussian case with an arbitrary covariance matrix Σ; the “unequal variances” case for the Student two-sample t− and Welch statistics; and evaluation of K<sub>g</sub>. for the densities considered in the simulation study.
+[OST /TST /WELCH /F ]+ComputeKg.nb - compute the exact expression for K<sub>g</sub> for an arbitrary multivariate density g and given sample size(s). We include a number of examples, such as evaluation of K<sub>g</sub> for the zero-mean Gaussian case with an arbitrary covariance matrix **Σ**; the “unequal variances” case for the Student two-sample t− and Welch statistics; and evaluation of K<sub>g</sub>. for the densities considered in the simulation study.
 
 OSTComputeKgIID.nb - veriﬁes the constants in Table 1 for the i.i.d. case of the Student one-sample t−statistic.
 
@@ -27,9 +27,9 @@ Other Materials
 
 Supplementary-Materials.pdf - Remarks on Theorem 1.1 and its application to real data; extended version of the literature review; comparison of the result of Theorem 1.1 with the exact distribution of the Welch statistic; proof of Theorem 5.1.
  
-______________________
-<sup>1</sup>For the F−statistic we use Monte Carlo integration.
-<sup>2</sup>For the F−statistic and n1 > 3 we use Monte Carlo integration.
+___
+<sup>1</sup>For the F−statistic we use Monte Carlo integration. 
+<sup>2</sup>For the F−statistic and n<sub>1</sub> > 3 we use Monte Carlo integration.
 
 ## Reference
 Zholud, D. (2014). [**Tail approximations for the Student t−, F−, and Welch statistics for non-normal and not necessarily i.i.d. random variables**](http://www.zholud.com/articles/Tail-approximations-for-the-Student-t-,-F-,-and-Welch-statistics-for-non-normal-and-not-necessarily-i.i.d.-random-variables.pdf), **Bernoulli**, Vol. 20, No. 4, pp. 2102-2130
