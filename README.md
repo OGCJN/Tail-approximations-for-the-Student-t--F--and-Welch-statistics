@@ -7,13 +7,13 @@ We present a detailed study of the asymptotic behavior of the distribution of th
 
 **MATLAB**
 
-[OST /TST /WELCH /F]+ComputeKg.m - compute K<sub>g</sub> for the Student one- and two- sample t−, Welch, and F− statistics using adaptive Simpson or Lobatto quadratures. Here g is an arbitrary multivariate density.<sup>1</sup>
+[[**OST**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/OSTComputeKg.m) /[**TST**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/TSTComputeKg.m) /[**WELCH**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/WELCHComputeKg.m) /[**F**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/FComputeKg.m)]+ComputeKg.m - compute K<sub>g</sub> for the Student one- and two- sample t−, Welch, and F− statistics using adaptive Simpson or Lobatto quadratures. Here g is an arbitrary multivariate density.<sup>1</sup>
 
-[TST /WELCH /F]+ComputeKgIS+.m - the same as above but for the case where samples are independent.<sup>2</sup>
+[[**TST**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/TSTComputeKgIS.m) /[**WELCH**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/WELCHComputeKgIS.m) /[**F**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/FComputeKgIS.m)]+ComputeKgIS+.m - the same as above but for the case where samples are independent.<sup>2</sup>
 
-[OST /TST /WELCH /F]+ComputeKgIID+.m - the same as above but assuming that the samples consist of i.i.d. random variables.<sup>2</sup>
+[[**OST**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/OSTComputeKgIID.m) /[**TST**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/TSTComputeKgIID.m) /[**WELCH**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/WELCHComputeKgIID.m) /[**F**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/FComputeKgIID.m)]+ComputeKgIID+.m - the same as above but assuming that the samples consist of i.i.d. random variables.<sup>2</sup>
 
-RunSimulation+[IID/MVN]+.m - perform simulation study for i.i.d. and dependent/non-homogeneous cases, see Section 7 and Appendix B.
+RunSimulation+[[**IID**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/Simulation%20Study/RunSimulationIID.m)/[**MVN**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/MATLAB/Simulation%20Study/RunSimulationMVN.m)]+.m - perform simulation study for i.i.d. and dependent/non-homogeneous cases, see Section 7 and Appendix B.
 
 **Wolfram Mathematica**
 
@@ -34,7 +34,7 @@ RunSimulation+[IID/MVN]+.m - perform simulation study for i.i.d. and dependent/n
 ## Reference
 Zholud, D. (2014). [**Tail approximations for the Student t−, F−, and Welch statistics for non-normal and not necessarily i.i.d. random variables**](http://www.zholud.com/articles/Tail-approximations-for-the-Student-t-,-F-,-and-Welch-statistics-for-non-normal-and-not-necessarily-i.i.d.-random-variables.pdf), *Bernoulli*, Vol. 20, No. 4, pp. 2102-2130
 
-W.D. Ray and A.E.N.T. Pitman (1961). **An exact distribution of the Fisher-Behrens-Welch statistic for testing the diﬀerence between the means of two normal populations with unknown variance**, *J. Royal Stat. Soc., Series B*, Vol. 23, No. 2, pp. 377–384
+W.D. Ray and A.E.N.T. Pitman (1961). **An exact distribution of the Fisher-Behrens-Welch statistic for testing the diﬀerence between the means of two normal populations with unknown variance**, *J. Royal Stat. Soc., Series B*, Vol. 23, No. 2, pp. 377-384
 
 ## BiBTeX
 
