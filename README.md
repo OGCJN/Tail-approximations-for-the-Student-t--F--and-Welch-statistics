@@ -7,25 +7,25 @@ We present a detailed study of the asymptotic behavior of the distribution of th
 
 **MATLAB**
 
-[OST /TST /WELCH /F ]+ComputeKg.m - compute K<sub>g</sub> for the Student one- and two- sample t−, Welch, and F− statistics using adaptive Simpson or Lobatto quadratures. Here g is an arbitrary multivariate density.<sup>1</sup>
+[OST /TST /WELCH /F]+ComputeKg.m - compute K<sub>g</sub> for the Student one- and two- sample t−, Welch, and F− statistics using adaptive Simpson or Lobatto quadratures. Here g is an arbitrary multivariate density.<sup>1</sup>
 
-[TST /WELCH /F ]+ComputeKgIS+.m - the same as above but for the case where samples are independent.<sup>2</sup>
+[TST /WELCH /F]+ComputeKgIS+.m - the same as above but for the case where samples are independent.<sup>2</sup>
 
-[OST /TST /WELCH /F ]+ComputeKgIID+.m - the same as above but assuming that the samples consist of i.i.d. random variables.<sup>2</sup>
+[OST /TST /WELCH /F]+ComputeKgIID+.m - the same as above but assuming that the samples consist of i.i.d. random variables.<sup>2</sup>
 
-RunSimulation+[IID/MVN ]+.m - perform simulation study for i.i.d. and dependent/non-homogeneous cases, see Section 7 and Appendix B.
+RunSimulation+[IID/MVN]+.m - perform simulation study for i.i.d. and dependent/non-homogeneous cases, see Section 7 and Appendix B.
 
 **Wolfram Mathematica**
 
-[OST /TST /WELCH /F ]+ComputeKg.nb - compute the exact expression for K<sub>g</sub> for an arbitrary multivariate density g and given sample size(s). We include a number of examples, such as evaluation of K<sub>g</sub> for the zero-mean Gaussian case with an arbitrary covariance matrix **Σ**; the “unequal variances” case for the Student two-sample t− and Welch statistics; and evaluation of K<sub>g</sub>. for the densities considered in the simulation study.
+[[**OST**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/Mathematica/OSTComputeKg.nb) /[**TST**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/Mathematica/TSTComputeKg.nb) /[**WELCH**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/Mathematica/WELCHComputeKg.nb) /[**F**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/Mathematica/FComputeKg.nb)]+ComputeKg.nb - compute the exact expression for K<sub>g</sub> for an arbitrary multivariate density g and given sample size(s). We include a number of examples, such as evaluation of K<sub>g</sub> for the zero-mean Gaussian case with an arbitrary covariance matrix **Σ**; the “unequal variances” case for the Student two-sample t− and Welch statistics; and evaluation of K<sub>g</sub>. for the densities considered in the simulation study.
 
-OSTComputeKgIID.nb - veriﬁes the constants in Table 1 for the i.i.d. case of the Student one-sample t−statistic.
+[**OSTComputeKgIID.nb**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/Mathematica/OSTComputeKgIID.nb) - veriﬁes the constants in Table 1 for the i.i.d. case of the Student one-sample t−statistic.
 
-TSTExactPDF.nb and WELCHExactPDF.nb - the exact distribution for the Student two-sample t− and Welch statistics for odd sample sizes, see (Ray and Pitman, 1961).
+[**TSTExactPDF.nb**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/Mathematica/TSTExactPDF.nb) and [**WELCHExactPDF.nb**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/Mathematica/WELCHExactPDF.nb) - the exact distribution for the Student two-sample t− and Welch statistics for odd sample sizes, see (Ray and Pitman, 1961).
 
 **Other Materials**
 
-Supplementary-Materials.pdf - Remarks on Theorem 1.1 and its application to real data; extended version of the literature review; comparison of the result of Theorem 1.1 with the exact distribution of the Welch statistic; proof of Theorem 5.1.
+[**Supplementary-Materials.pdf**](https://github.com/OGCJN/Tail-approximations-for-the-Student-t--F--and-Welch-statistics/blob/master/Supplementary%20Materials/Supplementary-Materials.pdf) - Remarks on Theorem 1.1 and its application to real data; extended version of the literature review; comparison of the result of Theorem 1.1 with the exact distribution of the Welch statistic; proof of Theorem 5.1.
  
 ##
 <sup>1</sup>For the F−statistic we use Monte Carlo integration.\
