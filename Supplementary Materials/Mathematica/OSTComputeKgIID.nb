@@ -1,0 +1,1487 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     49874,       1478]
+NotebookOptionsPosition[     47235,       1382]
+NotebookOutlinePosition[     47579,       1397]
+CellTagsIndexPosition[     47536,       1394]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "Computing", " ", "exact", " ", "values", " ", "for", " ", "the", " ", 
+      "constants", " ", 
+      SubscriptBox["K", "g"], " ", "for", " ", "the", " ", 
+      RowBox[{"i", ".", "i", ".", "d", ".", " ", "case"}], " ", "of", " ", 
+      "the", " ", "Student", " ", "one"}], "-", 
+     RowBox[{"sample", " ", "\[IndentingNewLine]", " ", "t"}], "-", 
+     RowBox[{"test", ":", " ", "Normal"}]}], ",", " ", 
+    RowBox[{"half", "-", "normal"}], ",", " ", 
+    RowBox[{"log", "-", "normal"}], ",", " ", "\[Chi]", ",", " ", 
+    SuperscriptBox["\[Chi]", "2"], ",", " ", 
+    RowBox[{"inverse", "-", 
+     SuperscriptBox["\[Chi]", "2"]}], ",", " ", "F", ",", " ", "T", ",", " ", 
+    "Cauchy", ",", " ", "beta", ",", " ", "gamma", ",", " ", 
+    "\[IndentingNewLine]", "   ", 
+    RowBox[{"inverse", "-", "gamma"}], ",", " ", "uniform", ",", " ", 
+    "exponential", ",", " ", 
+    RowBox[{"centered", " ", "exponential"}], ",", " ", "Maxwell", ",", " ", 
+    "Pareto", ",", " ", 
+    RowBox[{
+    "Laplace", " ", "\[IndentingNewLine]", "  ", "and", " ", "Wald", " ", 
+     "distributions"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"KgOneSampleTIID", "[", 
+      RowBox[{"n_", ",", "g_"}], "]"}], ":=", 
+     RowBox[{"2", 
+      FractionBox[
+       SuperscriptBox["\[Pi]", 
+        RowBox[{"n", "/", "2"}]], 
+       FormBox[
+        TemplateBox[{FractionBox["n", "2"]},
+         "Gamma"],
+        TraditionalForm]], 
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+       RowBox[{
+        SuperscriptBox["r", 
+         RowBox[{"n", "-", "1"}]], 
+        SuperscriptBox[
+         RowBox[{"g", "[", 
+          RowBox[{"r", "/", 
+           SqrtBox["n"]}], "]"}], "n"], 
+        RowBox[{"\[DifferentialD]", "r"}]}]}]}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Standard", " ", "Normal"}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"NormalDistribution", "[", 
+        RowBox[{"0", ",", "\[Sigma]"}], "]"}], ",", "x"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Assuming", "[", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[Sigma]", ">", "0"}], " ", "&&", "  ", 
+      RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+      RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{"KgOneSampleTIID", "[", 
+       RowBox[{"n", ",", "h"}], "]"}], " ", "]"}]}], "]"}], " "}]}]], "Input",
+ CellChangeTimes->{{3.5135318021953125`*^9, 3.513531817336914*^9}, {
+   3.5135319117753906`*^9, 3.513531917276367*^9}, {3.5135339191464844`*^9, 
+   3.513534079854492*^9}, {3.513534114102539*^9, 3.5135341146992188`*^9}, 
+   3.5135341751064453`*^9, {3.5135342601220703`*^9, 3.5135342719091797`*^9}, {
+   3.513534507138672*^9, 3.5135345378359375`*^9}, {3.5135346139804688`*^9, 
+   3.513534624408203*^9}, 3.513538919828125*^9, {3.5135392785390625`*^9, 
+   3.5135393333476562`*^9}, 3.5135393979140625`*^9, 3.516526751803711*^9, 
+   3.516531747864258*^9, 3.5165319016572266`*^9, {3.5165413092246094`*^9, 
+   3.5165413109121094`*^9}, {3.5165415700966797`*^9, 
+   3.5165416072871094`*^9}, {3.5165420039453125`*^9, 3.5165420401396484`*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{
+  3.5135319286210938`*^9, {3.5135341170478516`*^9, 3.5135341200996094`*^9}, 
+   3.5135367276064453`*^9, 3.516526897506836*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Normal", " ", "zero"}], "-", "mean"}], ",", " ", 
+    RowBox[{
+     RowBox[{"g", "~", "N"}], 
+     RowBox[{"(", 
+      RowBox[{"\[Mu]", ",", 
+       SuperscriptBox["\[Sigma]", "2"]}], ")"}]}], ",", " ", 
+    RowBox[{"\[Mu]", ">", "0"}], ",", " ", 
+    RowBox[{"\[Sigma]", ">", "0"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"NormalDistribution", "[", 
+        RowBox[{
+         RowBox[{"\[Mu]", "/", "\[Sigma]"}], ",", "1"}], "]"}], ",", "x"}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Mu]", ">", "0"}], "&&", " ", 
+       RowBox[{"\[Sigma]", ">", "0"}], " ", "&&", "  ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.5135343256572266`*^9, 3.5135343339072266`*^9}, {
+   3.513534609805664*^9, 3.5135346105654297`*^9}, 3.51353549775*^9, 
+   3.5135389355*^9, 3.5165317748916016`*^9, 3.5165318996816406`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   TemplateBox[{FractionBox[
+      RowBox[{"1", "-", "n"}], "2"],FractionBox["1", "2"],RowBox[{"-", 
+       FractionBox[
+        RowBox[{"n", " ", 
+          SuperscriptBox["\[Mu]", "2"]}], 
+        RowBox[{"2", " ", 
+          SuperscriptBox["\[Sigma]", "2"]}]]}]},
+    "Hypergeometric1F1"], "+", 
+   FractionBox[
+    RowBox[{
+     SqrtBox["2"], " ", 
+     SqrtBox["n"], " ", "\[Mu]", " ", 
+     TemplateBox[{FractionBox[
+        RowBox[{"n", "+", "1"}], "2"]},
+      "Gamma"], " ", 
+     TemplateBox[{RowBox[{"1", "-", 
+         FractionBox["n", "2"]}],FractionBox["3", "2"],RowBox[{"-", 
+         FractionBox[
+          RowBox[{"n", " ", 
+            SuperscriptBox["\[Mu]", "2"]}], 
+          RowBox[{"2", " ", 
+            SuperscriptBox["\[Sigma]", "2"]}]]}]},
+      "Hypergeometric1F1"]}], 
+    RowBox[{"\[Sigma]", " ", 
+     TemplateBox[{FractionBox["n", "2"]},
+      "Gamma"]}]]}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.5135343420820312`*^9, 3.5135346808583984`*^9, 
+  3.513535504510742*^9, 3.516526905805664*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Normal", " ", "zero"}], "-", "mean"}], ",", " ", 
+    RowBox[{
+     RowBox[{"g", "~", "N"}], 
+     RowBox[{"(", 
+      RowBox[{"\[Mu]", ",", 
+       SuperscriptBox["\[Sigma]", "2"]}], ")"}]}], ",", " ", 
+    RowBox[{"\[Mu]", "<", "0"}], ",", " ", 
+    RowBox[{"\[Sigma]", ">", "0"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"NormalDistribution", "[", 
+        RowBox[{
+         RowBox[{"\[Mu]", "/", "\[Sigma]"}], ",", "1"}], "]"}], ",", "x"}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Mu]", "<", "0"}], "&&", " ", 
+       RowBox[{"\[Sigma]", ">", "0"}], " ", "&&", "  ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.5135346031621094`*^9, 3.5135346065410156`*^9}, {
+   3.5135346387382812`*^9, 3.5135346656279297`*^9}, 3.5135355111035156`*^9, 
+   3.5135389394501953`*^9, 3.516531778421875*^9, 3.5165318959882812`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    TemplateBox[{FractionBox[
+       RowBox[{"n", "+", "1"}], "2"]},
+     "Gamma"], " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"n", " ", 
+        SuperscriptBox["\[Mu]", "2"]}], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["\[Sigma]", "2"]}]]}]], " ", 
+    TemplateBox[{FractionBox["n", "2"],FractionBox["1", "2"],FractionBox[
+       RowBox[{"n", " ", 
+         SuperscriptBox["\[Mu]", "2"]}], 
+       RowBox[{"2", " ", 
+         SuperscriptBox["\[Sigma]", "2"]}]]},
+     "HypergeometricU"]}], 
+   SqrtBox["\[Pi]"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.513534688020508*^9, 3.5135355156367188`*^9, 
+  3.5165269139853516`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Now", " ", "show", " ", "that", " ", "the", " ", "formula", " ", "for", 
+     " ", "\[Mu]"}], ">", 
+    RowBox[{
+    "0", " ", "is", " ", "also", " ", "valid", " ", "for", " ", "\[Mu]"}], 
+    "<", "0"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Assuming", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Mu]", "<", "0"}], "&&", 
+     RowBox[{"\[Sigma]", ">", "0"}], "&&", "  ", 
+     RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+     RowBox[{"n", ">", "1"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"FullSimplify", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      FormBox[
+       TemplateBox[{FractionBox[
+          RowBox[{"1", "-", "n"}], "2"],FractionBox["1", "2"],RowBox[{"-", 
+           FractionBox[
+            RowBox[{"n", " ", 
+              SuperscriptBox["\[Mu]", "2"]}], 
+            RowBox[{"2", " ", 
+              SuperscriptBox["\[Sigma]", "2"]}]]}]},
+        "Hypergeometric1F1"],
+       TraditionalForm], "+", 
+      FormBox[
+       FractionBox[
+        RowBox[{
+         SqrtBox["2"], " ", 
+         SqrtBox["n"], " ", "\[Mu]", " ", 
+         TemplateBox[{FractionBox[
+            RowBox[{"n", "+", "1"}], "2"]},
+          "Gamma"], " ", 
+         TemplateBox[{RowBox[{"1", "-", 
+             FractionBox["n", "2"]}],FractionBox["3", "2"],RowBox[{"-", 
+             FractionBox[
+              RowBox[{"n", " ", 
+                SuperscriptBox["\[Mu]", "2"]}], 
+              RowBox[{"2", " ", 
+                SuperscriptBox["\[Sigma]", "2"]}]]}]},
+          "Hypergeometric1F1"]}], 
+        RowBox[{"\[Sigma]", " ", 
+         TemplateBox[{FractionBox["n", "2"]},
+          "Gamma"]}]],
+       TraditionalForm], "\[IndentingNewLine]", 
+      "                                            ", "-", 
+      FormBox[
+       FractionBox[
+        RowBox[{
+         TemplateBox[{FractionBox[
+            RowBox[{"n", "+", "1"}], "2"]},
+          "Gamma"], " ", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"n", " ", 
+             SuperscriptBox["\[Mu]", "2"]}], 
+            RowBox[{"2", " ", 
+             SuperscriptBox["\[Sigma]", "2"]}]]}]], " ", 
+         TemplateBox[{FractionBox["n", "2"],FractionBox["1", "2"],FractionBox[
+            RowBox[{"n", " ", 
+              SuperscriptBox["\[Mu]", "2"]}], 
+            RowBox[{"2", " ", 
+              SuperscriptBox["\[Sigma]", "2"]}]]},
+          "HypergeometricU"]}], 
+        SqrtBox["\[Pi]"]],
+       TraditionalForm]}], "]"}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.5135346748964844`*^9, {3.5135389673652344`*^9, 3.5135389932382812`*^9}, {
+   3.5135392368496094`*^9, 3.513539259178711*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.513534692401367*^9, 3.516526919623047*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Half", "-", 
+     RowBox[{"normal", " ", "distribution", " ", "with", " ", "mean", " ", 
+      RowBox[{"1", "/", "\[Theta]"}]}]}], ",", " ", 
+    RowBox[{"\[Theta]", ">", "0"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"HalfNormalDistribution", "[", "\[Theta]", "]"}], ",", "x"}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Assuming", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[Theta]", " ", "\[Element]", " ", "Reals"}], "  ", "&&", " ", 
+      RowBox[{"\[Theta]", ">", "0"}], " ", "&&", "  ", 
+      RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+      RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{"KgOneSampleTIID", "[", 
+       RowBox[{"n", ",", "h"}], "]"}], " ", "]"}]}], "]"}], " "}]}]], "Input",
+ CellChangeTimes->{{3.513534738538086*^9, 3.5135347773554688`*^9}, 
+   3.513539006395508*^9, 3.5165317797158203`*^9, 3.5165318907470703`*^9}],
+
+Cell[BoxData[
+ SuperscriptBox["2", "n"]], "Output",
+ CellChangeTimes->{3.5135347794902344`*^9, 3.516526924165039*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Log", "-", 
+    RowBox[{
+    "normal", " ", "distribution", " ", "derived", " ", "from", " ", "N", 
+     RowBox[{"(", 
+      RowBox[{"\[Mu]", ",", 
+       SuperscriptBox["\[Sigma]", "2"]}], ")"}]}]}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"LogNormalDistribution", "[", 
+        RowBox[{"\[Mu]", ",", "\[Sigma]"}], "]"}], ",", "x"}], "]"}]}], ";"}],
+    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Mu]", "\[Element]", " ", "Reals"}], "&&", " ", 
+       RowBox[{"\[Sigma]", ">", "0"}], " ", "&&", "  ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.5135347981552734`*^9, 3.5135348215302734`*^9}, {
+   3.513535373767578*^9, 3.513535378080078*^9}, 3.5135390104628906`*^9, 
+   3.5135394890195312`*^9, 3.516531780616211*^9, 3.5165318883007812`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    SqrtBox["\[Pi]"], " ", 
+    SuperscriptBox["2", 
+     RowBox[{
+      FractionBox["3", "2"], "-", 
+      FractionBox["n", "2"]}]], " ", 
+    SuperscriptBox["n", 
+     FractionBox[
+      RowBox[{"n", "-", "1"}], "2"]], " ", 
+    SuperscriptBox["\[Sigma]", 
+     RowBox[{"1", "-", "n"}]]}], 
+   TemplateBox[{FractionBox["n", "2"]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.513534840290039*^9, 3.5135354771572266`*^9, 
+  3.51652694225*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Chi", " ", "distribution", " ", "with", " ", "\[Nu]"}], ">", 
+    RowBox[{"0", " ", "degrees", " ", "of", " ", "freedom"}]}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"ChiDistribution", "[", "\[Nu]", "]"}], ",", "x"}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Nu]", ">", "0"}], "&&", " ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], "  ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.513534861379883*^9, 3.5135348801015625`*^9}, {
+   3.5135349636835938`*^9, 3.5135349657646484`*^9}, {3.5135349973564453`*^9, 
+   3.5135350049833984`*^9}, {3.513535524885742*^9, 3.5135355401083984`*^9}, 
+   3.513539014373047*^9, 3.516531781129883*^9, 3.516531868392578*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["2", "n"], " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    SuperscriptBox["n", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", "2"]}], " ", "n", " ", 
+      RowBox[{"(", 
+       RowBox[{"\[Nu]", "-", "1"}], ")"}]}]], " ", 
+    SuperscriptBox[
+     TemplateBox[{FractionBox["\[Nu]", "2"]},
+      "Gamma"], 
+     RowBox[{"-", "n"}]], " ", 
+    TemplateBox[{FractionBox[
+       RowBox[{"n", " ", "\[Nu]"}], "2"]},
+     "Gamma"]}], 
+   TemplateBox[{FractionBox["n", "2"]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.513535011395508*^9, 3.5135355303632812`*^9, 
+  3.516526949307617*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Chi", "-", 
+     RowBox[{"Square", " ", "distribution", " ", "with", " ", "\[Nu]"}]}], 
+    "\[GreaterEqual]", 
+    RowBox[{"2", " ", "degrees", " ", "of", " ", "freedom"}]}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"ChiSquareDistribution", "[", "\[Nu]", "]"}], ",", "x"}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Nu]", "\[GreaterEqual]", "2"}], " ", "&&", "  ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.513534861379883*^9, 3.5135348801015625`*^9}, {
+   3.5135349636835938`*^9, 3.5135349657646484`*^9}, {3.5135349973564453`*^9, 
+   3.513535024046875*^9}, 3.5135355480996094`*^9, 3.513539017623047*^9, 
+   3.5165317815478516`*^9, 3.516531832770508*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"2", " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    SuperscriptBox["n", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", "2"]}], " ", "n", " ", 
+      RowBox[{"(", 
+       RowBox[{"\[Nu]", "-", "1"}], ")"}]}]], " ", 
+    SuperscriptBox[
+     TemplateBox[{FractionBox["\[Nu]", "2"]},
+      "Gamma"], 
+     RowBox[{"-", "n"}]], " ", 
+    TemplateBox[{FractionBox[
+       RowBox[{"n", " ", "\[Nu]"}], "2"]},
+     "Gamma"]}], 
+   TemplateBox[{FractionBox["n", "2"]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.513535025080078*^9, 3.5135355532285156`*^9, 
+  3.516526965307617*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Inverse", " ", "Chi"}], "-", 
+     RowBox[{"Square", " ", "with", " ", "\[Nu]"}]}], ">", 
+    RowBox[{"0", " ", "degrees", " ", "of", " ", "freedom"}]}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"InverseChiSquareDistribution", "[", "\[Nu]", "]"}], ",", 
+       "x"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Nu]", ">", "0"}], " ", "&&", "  ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.513534861379883*^9, 3.5135348801015625`*^9}, {
+   3.5135349636835938`*^9, 3.5135349657646484`*^9}, {3.5135349973564453`*^9, 
+   3.5135350405498047`*^9}, 3.5135355542783203`*^9, 3.5135390275566406`*^9, 
+   3.5165317818447266`*^9, 3.5165318553779297`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"2", " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    SuperscriptBox["n", 
+     RowBox[{
+      FractionBox["1", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{"n", "-", 
+        RowBox[{"n", " ", "\[Nu]"}]}], ")"}]}]], " ", 
+    SuperscriptBox[
+     TemplateBox[{FractionBox["\[Nu]", "2"]},
+      "Gamma"], 
+     RowBox[{"-", "n"}]], " ", 
+    TemplateBox[{FractionBox[
+       RowBox[{"n", " ", "\[Nu]"}], "2"]},
+     "Gamma"]}], 
+   TemplateBox[{FractionBox["n", "2"]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.5135350628242188`*^9, 3.5135355660146484`*^9, 
+  3.516526988375*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "F", " ", "distribution", " ", "witn", " ", "\[Mu]", " ", "and", " ", 
+    "\[Nu]", " ", "degrees", " ", "of", " ", "freedom"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"FRatioDistribution", "[", 
+        RowBox[{"\[Mu]", ",", "\[Nu]"}], "]"}], ",", "x"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Mu]", ">", "0"}], " ", "&&", " ", 
+       RowBox[{"\[Nu]", ">", "0"}], " ", "&&", "  ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.513534861379883*^9, 3.5135348801015625`*^9}, {
+   3.5135349636835938`*^9, 3.5135349657646484`*^9}, {3.5135349973564453`*^9, 
+   3.5135350620390625`*^9}, 3.513535559048828*^9, 3.513539030129883*^9, 
+   3.5165317820859375`*^9, 3.516531856076172*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"2", " ", 
+    SuperscriptBox["n", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    TemplateBox[{FractionBox[
+       RowBox[{"n", " ", "\[Mu]"}], "2"]},
+     "Gamma"], " ", 
+    TemplateBox[{FractionBox[
+       RowBox[{"n", " ", "\[Nu]"}], "2"]},
+     "Gamma"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox[
+       TemplateBox[{FractionBox[
+          RowBox[{"\[Mu]", "+", "\[Nu]"}], "2"]},
+        "Gamma"], 
+       RowBox[{
+        TemplateBox[{FractionBox["\[Mu]", "2"]},
+         "Gamma"], " ", 
+        TemplateBox[{FractionBox["\[Nu]", "2"]},
+         "Gamma"]}]], ")"}], "n"]}], 
+   RowBox[{
+    TemplateBox[{FractionBox["n", "2"]},
+     "Gamma"], " ", 
+    TemplateBox[{RowBox[{
+        FractionBox["1", "2"], " ", "n", " ", 
+        RowBox[{"(", 
+          RowBox[{"\[Mu]", "+", "\[Nu]"}], ")"}]}]},
+     "Gamma"]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.513535103520508*^9, 3.513535602326172*^9, 
+  3.516527082296875*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"T", " ", "distribution", " ", "\[Nu]"}], ">", 
+    RowBox[{"0", " ", "degrees", " ", "of", " ", "freedom"}]}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"StudentTDistribution", "[", "\[Nu]", "]"}], ",", "x"}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Nu]", ">", " ", "0"}], " ", "&&", "  ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.513534861379883*^9, 3.5135348801015625`*^9}, {
+   3.5135349636835938`*^9, 3.5135349657646484`*^9}, {3.5135349973564453`*^9, 
+   3.5135350763310547`*^9}, 3.513535575310547*^9, 3.513539033260742*^9, 
+   3.516531782294922*^9, 3.516531856725586*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["n", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    TemplateBox[{FractionBox[
+       RowBox[{"n", " ", "\[Nu]"}], "2"]},
+     "Gamma"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox[
+       TemplateBox[{FractionBox[
+          RowBox[{"\[Nu]", "+", "1"}], "2"]},
+        "Gamma"], 
+       TemplateBox[{FractionBox["\[Nu]", "2"]},
+        "Gamma"]], ")"}], "n"]}], 
+   TemplateBox[{RowBox[{
+       FractionBox["1", "2"], " ", "n", " ", 
+       RowBox[{"(", 
+         RowBox[{"\[Nu]", "+", "1"}], ")"}]}]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.5135351628984375`*^9, 3.5135356500878906`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Cauchy", " ", "distribution"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"StudentTDistribution", "[", "1", "]"}], ",", "x"}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.513534861379883*^9, 3.5135348801015625`*^9}, {
+   3.5135349636835938`*^9, 3.5135349657646484`*^9}, {3.5135349973564453`*^9, 
+   3.5135350854628906`*^9}, 3.5135355832646484`*^9, 3.513539035881836*^9, 
+   3.5165317825439453`*^9, 3.516531857328125*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["n", 
+     RowBox[{
+      FractionBox["n", "2"], "+", "1"}]], " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{
+      RowBox[{"-", "n"}], "/", "2"}]], " ", 
+    TemplateBox[{FractionBox["n", "2"]},
+     "Gamma"]}], 
+   RowBox[{"n", "!"}]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.513535195961914*^9, 3.513535652916992*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Beta", " ", "distribution", " ", "with", " ", "parameters", " ", 
+     "\[Alpha]"}], ">", 
+    RowBox[{"1", " ", "and", " ", "\[Beta]"}], ">", "1"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{
+      RowBox[{"PDF", "[", 
+       RowBox[{
+        RowBox[{"BetaDistribution", "[", 
+         RowBox[{"\[Alpha]", ",", "\[Beta]"}], "]"}], ",", "x"}], "]"}], 
+      RowBox[{"Boole", "[", 
+       RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", "1"}], "]"}]}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Alpha]", ">", "1"}], "&&", " ", 
+       RowBox[{"\[Beta]", ">", "1"}], "&&", " ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.513534861379883*^9, 3.5135348801015625`*^9}, {
+   3.5135349636835938`*^9, 3.5135349657646484`*^9}, {3.5135349973564453`*^9, 
+   3.5135350997753906`*^9}, 3.513535594484375*^9, 3.5135390381816406`*^9, 
+   3.5165317832197266`*^9, 3.516531857833008*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"2", " ", 
+    SuperscriptBox["n", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    TemplateBox[{RowBox[{"n", " ", "\[Alpha]"}]},
+     "Gamma"], " ", 
+    TemplateBox[{RowBox[{
+        RowBox[{"n", " ", 
+          RowBox[{"(", 
+            RowBox[{"\[Beta]", "-", "1"}], ")"}]}], "+", "1"}]},
+     "Gamma"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       TemplateBox[{"\[Alpha]"},
+        "Gamma"], " ", 
+       TemplateBox[{"\[Beta]"},
+        "Gamma"]}], ")"}], 
+     RowBox[{"-", "n"}]], " ", 
+    SuperscriptBox[
+     TemplateBox[{RowBox[{"\[Alpha]", "+", "\[Beta]"}]},
+      "Gamma"], "n"]}], 
+   RowBox[{
+    TemplateBox[{FractionBox["n", "2"]},
+     "Gamma"], " ", 
+    TemplateBox[{RowBox[{
+        RowBox[{"n", " ", 
+          RowBox[{"(", 
+            RowBox[{"\[Alpha]", "+", "\[Beta]", "-", "1"}], ")"}]}], "+", 
+        "1"}]},
+     "Gamma"]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.513535215810547*^9, 3.5135356706796875`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Gamma", " ", "distribution", " ", "with", " ", "parameters", " ", 
+     "\[Alpha]"}], ">", 
+    RowBox[{"1", " ", "and", " ", "\[Beta]"}], ">", "0"}], " ", "*)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"GammaDistribution", "[", 
+        RowBox[{"\[Alpha]", ",", "\[Beta]"}], "]"}], ",", "x"}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", "  ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Alpha]", ">", "1"}], " ", "&&", " ", 
+       RowBox[{"\[Beta]", ">", "0"}], " ", "&&", " ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.513534861379883*^9, 3.5135348801015625`*^9}, {
+   3.5135349636835938`*^9, 3.5135349657646484`*^9}, {3.5135349973564453`*^9, 
+   3.5135351156660156`*^9}, 3.5135356004726562`*^9, 3.5135390410771484`*^9, 
+   3.516531783444336*^9, 3.5165318582666016`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"2", " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    SuperscriptBox["n", 
+     RowBox[{
+      RowBox[{"-", "n"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"\[Alpha]", "-", 
+        FractionBox["1", "2"]}], ")"}]}]], " ", 
+    SuperscriptBox[
+     TemplateBox[{"\[Alpha]"},
+      "Gamma"], 
+     RowBox[{"-", "n"}]], " ", 
+    TemplateBox[{RowBox[{"n", " ", "\[Alpha]"}]},
+     "Gamma"]}], 
+   TemplateBox[{FractionBox["n", "2"]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.513535224196289*^9, 3.5135356751484375`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Inverse", " ", "Gamma", " ", "distribution", " ", "with", " ", 
+     "parameters", " ", "\[Alpha]"}], ">", 
+    RowBox[{"0", " ", "and", " ", "\[Beta]"}], ">", "0"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"InverseGammaDistribution", "[", 
+        RowBox[{"\[Alpha]", ",", "\[Beta]"}], "]"}], ",", "x"}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", "  ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Alpha]", ">", "0"}], " ", "&&", " ", 
+       RowBox[{"\[Beta]", ">", "0"}], " ", "&&", " ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.513534861379883*^9, 3.5135348801015625`*^9}, {
+   3.5135349636835938`*^9, 3.5135349657646484`*^9}, {3.5135349973564453`*^9, 
+   3.5135351299921875`*^9}, 3.5135356240927734`*^9, 3.5135390434101562`*^9, 
+   3.5165317836689453`*^9, 3.516531858716797*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"2", " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    SuperscriptBox["n", 
+     RowBox[{
+      FractionBox["1", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{"n", "-", 
+        RowBox[{"2", " ", "n", " ", "\[Alpha]"}]}], ")"}]}]], " ", 
+    SuperscriptBox[
+     TemplateBox[{"\[Alpha]"},
+      "Gamma"], 
+     RowBox[{"-", "n"}]], " ", 
+    TemplateBox[{RowBox[{"n", " ", "\[Alpha]"}]},
+     "Gamma"]}], 
+   TemplateBox[{FractionBox["n", "2"]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.513535245915039*^9, 3.5135356875390625`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Uniform", " ", "distribution", " ", 
+    RowBox[{"on", " ", "[", 
+     RowBox[{"a", ",", "b"}], "]"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"UniformDistribution", "[", 
+        RowBox[{"{", 
+         RowBox[{"a", ",", "b"}], "}"}], "]"}], ",", "x"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"b", ">", "a"}], "&&", " ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.513534861379883*^9, 3.5135348801015625`*^9}, {
+   3.5135349636835938`*^9, 3.5135349657646484`*^9}, {3.5135349973564453`*^9, 
+   3.51353514496875*^9}, 3.513535638071289*^9, 3.5135390459404297`*^9, 
+   3.5165317839501953`*^9, 3.516531859158203*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"2", " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    RowBox[{"(", 
+     RowBox[{"\[Piecewise]", GridBox[{
+        {
+         RowBox[{
+          SuperscriptBox["n", 
+           RowBox[{
+            FractionBox["n", "2"], "-", "1"}]], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox["b", 
+             RowBox[{"b", "-", "a"}]], ")"}], "n"]}], 
+         RowBox[{
+          RowBox[{"a", "\[LessEqual]", "0"}], "\[And]", 
+          RowBox[{"b", ">", "0"}]}]},
+        {
+         RowBox[{
+          SuperscriptBox["n", 
+           RowBox[{
+            FractionBox["n", "2"], "-", "1"}]], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"b", "-", "a"}], ")"}], 
+           RowBox[{"-", "n"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox["b", "n"], "-", 
+            SuperscriptBox["a", "n"]}], ")"}]}], 
+         RowBox[{"a", ">", "0"}]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.84]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}]}], ")"}]}], 
+   TemplateBox[{FractionBox["n", "2"]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.5135352590341797`*^9, 3.5135356976503906`*^9, 
+  3.516527104294922*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Exponential", " ", "distribution", " ", "with", " ", "parameter", " ", 
+     "\[Lambda]"}], ">", "0"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"ExponentialDistribution", "[", "\[Lambda]", "]"}], ",", "x"}],
+       "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Lambda]", " ", ">", "0"}], "&&", " ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.513534861379883*^9, 3.5135348801015625`*^9}, {
+   3.5135349636835938`*^9, 3.5135349657646484`*^9}, {3.5135349973564453`*^9, 
+   3.5135351541835938`*^9}, 3.5135356428632812`*^9, 3.5135390496640625`*^9, 
+   3.516531784208008*^9, 3.516531859736328*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"2", " ", 
+    SuperscriptBox["n", 
+     RowBox[{
+      RowBox[{"-", "n"}], "/", "2"}]], " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    TemplateBox[{"n"},
+     "Gamma"]}], 
+   TemplateBox[{FractionBox["n", "2"]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.5135352600117188`*^9, 3.5135356985458984`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Centered", " ", "exponential", " ", "distribution", " ", "with", " ", 
+     "parameter", " ", "\[Lambda]"}], ">", "0"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"ExponentialDistribution", "[", "\[Lambda]", "]"}], ",", 
+       RowBox[{"x", "+", 
+        RowBox[{"1", "/", "\[Lambda]"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Lambda]", " ", ">", "0"}], "&&", " ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.513534861379883*^9, 3.5135348801015625`*^9}, {
+   3.5135349636835938`*^9, 3.5135349657646484`*^9}, {3.5135349973564453`*^9, 
+   3.5135351576445312`*^9}, 3.5135356498691406`*^9, 3.5135390520146484`*^9, 
+   3.516531784489258*^9, 3.5165318602666016`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"2", " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", "n"}]], " ", 
+    SuperscriptBox["n", 
+     RowBox[{
+      RowBox[{"-", "n"}], "/", "2"}]], " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    TemplateBox[{"n"},
+     "Gamma"]}], 
+   TemplateBox[{FractionBox["n", "2"]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.513535269107422*^9, 3.513535701189453*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Maxwell", " ", "distribution", " ", "with", " ", "parameter", " ", 
+     "\[Sigma]"}], ">", "0"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"MaxwellDistribution", "[", "\[Sigma]", "]"}], ",", "x"}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Sigma]", ">", "0"}], " ", "&&", " ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.5135349659414062`*^9, 3.513534966109375*^9}, {
+   3.5135351622910156`*^9, 3.5135351668378906`*^9}, 3.513535657915039*^9, 
+   3.513539055283203*^9, 3.5165317848583984`*^9, 3.5165318607802734`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["4", "n"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["1", "n"], ")"}], "n"], " ", 
+    TemplateBox[{FractionBox[
+       RowBox[{"3", " ", "n"}], "2"]},
+     "Gamma"]}], 
+   TemplateBox[{FractionBox["n", "2"]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.51353527009375*^9, 3.513535702180664*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Pareto", " ", "distribution", " ", "with", " ", "parameters", " ", "k"}],
+     ">", 
+    RowBox[{"0", " ", "and", " ", "\[Alpha]"}], ">", "0"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{
+      RowBox[{"PDF", "[", 
+       RowBox[{
+        RowBox[{"ParetoDistribution", "[", 
+         RowBox[{"k", ",", "\[Alpha]"}], "]"}], ",", "x"}], "]"}], 
+      RowBox[{"Boole", "[", 
+       RowBox[{"k", "\[LessEqual]", " ", "x"}], "]"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"k", ">", "0"}], "&&", 
+       RowBox[{"\[Alpha]", ">", "1"}], " ", "&&", " ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.5135349659414062`*^9, 3.513534966109375*^9}, {
+   3.5135351622910156`*^9, 3.5135351668378906`*^9}, 3.5135356618759766`*^9, 
+   3.5135390573134766`*^9, 3.516531785501953*^9, 3.516531861270508*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["n", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    SuperscriptBox["\[Alpha]", 
+     RowBox[{"n", "-", "1"}]]}], 
+   TemplateBox[{RowBox[{
+       FractionBox["n", "2"], "+", "1"}]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.5135352743964844`*^9, 3.513535703323242*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Laplace", " ", "distribution", " ", "with", " ", "parameters", " ", 
+     "\[Mu]", " ", "and", " ", "\[Beta]"}], ">", "0"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", "[", "x_", "]"}], ":=", " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"LaplaceDistribution", "[", 
+        RowBox[{"\[Mu]", ",", "\[Beta]"}], "]"}], ",", "x"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Assuming", "[", "  ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Mu]", " ", "\[Element]", "  ", "Reals"}], " ", "&&", " ", 
+       RowBox[{"\[Beta]", ">", "0"}], " ", "&&", " ", 
+       RowBox[{"n", "\[Element]", " ", "Integers"}], " ", "&&", " ", 
+       RowBox[{"n", ">", "1"}]}], " ", ",", "\[IndentingNewLine]", 
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"KgOneSampleTIID", "[", 
+        RowBox[{"n", ",", " ", "h"}], "]"}], " ", "]"}]}], "]"}], " ", "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.5135349662802734`*^9, 3.513534966448242*^9}, {
+   3.5135351729648438`*^9, 3.5135351804228516`*^9}, 3.5135357118476562`*^9, 
+   3.5135390597890625`*^9, 3.5165317859921875`*^9, 3.5165318621132812`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"2", " ", 
+    SuperscriptBox["\[Pi]", 
+     RowBox[{"n", "/", "2"}]], " ", 
+    RowBox[{"(", 
+     RowBox[{"\[Piecewise]", GridBox[{
+        {
+         RowBox[{
+          SuperscriptBox["2", 
+           RowBox[{"-", "n"}]], " ", 
+          SuperscriptBox["n", 
+           RowBox[{
+            RowBox[{"-", "n"}], "/", "2"}]], " ", 
+          TemplateBox[{"n"},
+           "Gamma"], " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"n", " ", "\[Mu]"}], "\[Beta]"]]}], 
+         RowBox[{"\[Mu]", "\[LessEqual]", "0"}]},
+        {
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"-", "2"}], ")"}], 
+           RowBox[{"-", "n"}]], " ", 
+          SuperscriptBox["n", 
+           RowBox[{
+            RowBox[{"-", "n"}], "/", "2"}]], " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{"n", " ", "\[Mu]"}], "\[Beta]"]}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             TemplateBox[{"n",RowBox[{"-", 
+                 FractionBox[
+                  RowBox[{"n", " ", "\[Mu]"}], "\[Beta]"]}]},
+              "Gamma2"]}], "+", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"-", "1"}], ")"}], "n"], " ", 
+             SuperscriptBox["\[ExponentialE]", 
+              FractionBox[
+               RowBox[{"2", " ", "n", " ", "\[Mu]"}], "\[Beta]"]], " ", 
+             TemplateBox[{"n",FractionBox[
+                RowBox[{"n", " ", "\[Mu]"}], "\[Beta]"]},
+              "Gamma2"]}], "+", 
+            TemplateBox[{"n"},
+             "Gamma"]}], ")"}]}], 
+         TagBox["True",
+          "PiecewiseDefault",
+          AutoDelete->False,
+          DeletionWarning->True]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.84]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}]}], ")"}]}], 
+   TemplateBox[{FractionBox["n", "2"]},
+    "Gamma"]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.5135390835615234`*^9}]
+}, Open  ]]
+},
+WindowSize->{1264, 665},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 3488, 80, 286, "Input"],
+Cell[4058, 104, 175, 3, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4270, 112, 1426, 37, 94, "Input"],
+Cell[5699, 151, 1069, 30, 74, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6805, 186, 1439, 37, 94, "Input"],
+Cell[8247, 225, 749, 22, 79, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9033, 252, 2782, 73, 276, "Input"],
+Cell[11818, 327, 92, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11947, 333, 1158, 27, 92, "Input"],
+Cell[13108, 362, 117, 2, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13262, 369, 1314, 33, 94, "Input"],
+Cell[14579, 404, 514, 17, 71, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15130, 426, 1218, 29, 92, "Input"],
+Cell[16351, 457, 712, 23, 76, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17100, 485, 1271, 31, 92, "Input"],
+Cell[18374, 518, 686, 22, 76, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19097, 545, 1263, 31, 92, "Input"],
+Cell[20363, 578, 681, 22, 76, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21081, 605, 1280, 31, 92, "Input"],
+Cell[22364, 638, 1071, 34, 86, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23472, 677, 1194, 29, 92, "Input"],
+Cell[24669, 708, 697, 22, 88, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25403, 735, 1046, 26, 92, "Input"],
+Cell[26452, 763, 401, 13, 63, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26890, 781, 1442, 36, 92, "Input"],
+Cell[28335, 819, 1082, 35, 62, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29454, 859, 1359, 33, 112, "Input"],
+Cell[30816, 894, 617, 20, 72, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31470, 919, 1359, 33, 92, "Input"],
+Cell[32832, 954, 632, 20, 71, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33501, 979, 1214, 30, 92, "Input"],
+Cell[34718, 1011, 1767, 51, 101, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36522, 1067, 1198, 29, 92, "Input"],
+Cell[37723, 1098, 403, 13, 62, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38163, 1116, 1282, 32, 92, "Input"],
+Cell[39448, 1150, 470, 15, 62, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39955, 1170, 1138, 28, 92, "Input"],
+Cell[41096, 1200, 407, 13, 69, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41540, 1218, 1356, 35, 92, "Input"],
+Cell[42899, 1255, 422, 13, 62, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43358, 1273, 1277, 31, 92, "Input"],
+Cell[44638, 1306, 2581, 73, 114, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
